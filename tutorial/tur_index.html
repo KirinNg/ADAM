@@ -12,9 +12,9 @@
     <meta name="referrer" content="never">
     <title>BJTU-ADAM Lab - 北京交通大学ADAM人工智能实验室官网</title>
     <link href="https://ai.tencent.com/ailab/images/favicon.ico" type="image/ico" rel="shortcut icon">
-    <script src="./js_files/segment.js"></script>
-    <link href="./js_files/app.b56908a4ef7f7c7df6627f70cc26fc81.css" rel="stylesheet">
-    <script type="text/javascript" charset="utf-8" async="" src="./js_files/9.691b19c55c2987dd0cf3.js"></script>
+    <script src="./huang_files/segment.js"></script>
+    <link href="./huang_files/app.b56908a4ef7f7c7df6627f70cc26fc81.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" async="" src="./huang_files/9.691b19c55c2987dd0cf3.js"></script>
 </head>
 
 <body _c_t_common="1" style="zoom: 1;" _c_t_j1="1" data-new-gr-c-s-check-loaded="14.1033.0" data-gr-ext-installed="">
@@ -27,13 +27,14 @@
                                   id="en">En</a></div>
             <div class="navbar" style="">
                 <ul style="height: 100%;">
-                    <li class="paperNav"><a href="../../index.html"
+                    <li class="paperNav"><a href="../index.html"
                                             class="router-link-exact-active router-link-active"><span>主页</span></a></li>
                     <!-- <li class="paperNav"><a href="adam-bjtu.org/paper/huang"
                             class="router-link-exact-active router-link-active"><span>论文</span></a></li>
                     <li class="aboutNav"><a href="/about"
                             class=""><span>关于</span></a></li> -->
-                    <li class="lang lang2"><a id="zh" class="">中</a> <span></span> <a id="en"                                                                                     class="langUnFocus">En</a></li>
+                    <li class="lang lang2"><a id="zh" class="">中</a> <span></span> <a id="en"
+                                                                                      class="langUnFocus">En</a></li>
                 </ul>
             </div>
             <!----> <a href="javascript:;" class="nav_btn"></a>
@@ -49,91 +50,38 @@
                 <center>
                     <h1>
                         <font face="helvetica" style="font-size:87%">
-                            Adversarial Defense via Attention Rectification and Preservation
+                            ACM MM Tutorial
                         </font>
                     </h1>
                 </center>
+
                 <br>
 
-                <h2><font face="helvetica" style="font-size:24px">Introduction</font></h2>
+                <h2><font face="helvetica" style="font-size:24px"><span style="color: #001eee;  font-size: 15pt">Title: Trustworthy Multimedia Analysis</span></font></h2>
                 <hr style="margin-top:-10px; margin-bottom:13px">
                 <font face="helvetica" style="font-size:18px">
                     <p align="justify">
-                        This study provides a new understanding of the adversarial attack problem by examining the correlation between adversarial attack and visual attention change. In particular, we observed that: (1) images with incomplete attention regions are more vulnerable to adversarial attacks; and (2) successful adversarial attacks lead to deviated and scattered attention map. Accordingly, an attention-based adversarial defense framework is designed to simultaneously rectify the attention map for prediction and preserve the attention area between adversarial and original images. The problem of adding iteratively attacked samples is also discussed in the context of visual attention change. We hope the attention-related data analysis and defense solution in this study will shed some light on the mechanism behind the adversarial attack and also facilitate future adversarial defense/attack model design.
-                        And adversarial examples provide an opportunity as well as impose a challenge for understanding image classification systems. Based on the analysis of the adversarial training solution Adversarial Logits Pairing (ALP), we observed in this work that: (1) The inference of adversarially robust model tends to rely on fewer high-contribution features compared with vulnerable ones. (2) The training target of ALP doesn't fit well to a noticeable part of samples, where the logits pairing loss is overemphasized and obstructs minimizing the classification loss. Motivated by these observations, we design an Adaptive Adversarial Logits Pairing (AALP) solution by modifying the training process and training target of ALP. Specifically, AALP consists of an adaptive feature optimization module with Guided Dropout to systematically pursue fewer high-contribution features, and an adaptive sample weighting module by setting sample-specific training weights to balance between logits pairing loss and classification loss. The proposed AALP solution demonstrates superior defense performance on multiple datasets with extensive experiments.
-                    <p>
-                        <b>The main contributions are as follows:</b>
+                        <b>Presenter:</b>
+                        <br>
+                        Xiaowen Huang, Beijing Jiaotong University<br>
+                        Jiaming Zhang, Beijing Jiaotong University<br>
+                        Yi Zhang, Beijing Jiaotong University<br>
+                        Xian Zhao, Beijing Jiaotong University<br>
+                        Jitao Sang, Beijing Jiaotong University<br>
+                        <b>Date:</b> 20 October, 2021 14:00-17:00 (GMT+8 time zone)<br>
+                        <b>Abstract:</b> <br>
+                        This tutorial discusses the trustworthiness issue in multimedia analysis. Starting from introducing two types of spurious correlations learned
+                        from distilling human knowledge, we partition the (visual) feature space along two dimensions of task-relevance and semantic-orientation. Trustworthy
+                        multimedia analysis ideally relies on the task-relevant semantic features and consists of three modules as trainer, interpreter and tester. These three
+                        modules essentially form a closed loop, which respectively address goals of extracting task-relevant features, extracting task-relevant semantic features,
+                        and detecting spurious correlations to be corrected by the trainer and interpreter.
+
                     </p>
-                    <ol style="margin-top:-7px">
-                        <li>
-                            We conducted a comprehensive data analysis and observed that successful adversarial attack exploits the incomplete attention area and brings significant fluctuation to the activation map. This provides a new understanding of the adversarial attack problem from the attention perspective.</li>
-                        <li>
-                            A novel attention-based adversarial defense method is proposed to simultaneously rectify and preserve the visual attention area. Qualitative and quantitative results on MNIST, CIFAR-10 and ImageNet2012 demonstrate its superior defense performance. The framework is flexible that alternative modeling of attention loss can be readily integrated into the existing adversarial attack as well as defense solutions
-                        </li>
-                        <li>
-                            In addition to applying visual attention to defense, we also discussed the possibility of using visual attention in adversarial attacks and gave an effective framework.
-                        </li>
-                        <li>
-                            We propose a Guided Dropout that tailors features based on feature contributions. It can prevent overfitting while improving the model’s robustness
-                        </li>
-                        <li>
-                            We propose a method to adaptively adjust the Adversarial Logits Pairing loss, and our proposed method greatly improves the robustness of the model against adversarial attacks and shows excellent results on multiple datasets.
-                        </li>
+
+
                     </ol>
 
                 </font>
-
-                <p style="padding-bottom:1px"></p>
-
-
-                <h2><font face="helvetica" style="font-size:24px">Framework</font></h2>
-                <hr style="margin-top:-10px; margin-bottom:13px">
-                <font face="helvetica" style="font-size:15px">
-
-                    <font face="helvetica" style="font-size:15px">
-                        <center>
-                            <img src="./images/pic1.png" height="180" width="1000">
-                            <br> <strong>Fig.1</strong>  AALP training framework. The upper is original sample and the lower is the adversarial sample. Guided Dropout is
-                            in the layer before the Logits layer.
-                        </center>
-                    </font>
-                    <br>
-                    <font face="helvetica" style="font-size:15px">
-                        <center>
-                            <img src="./images/pic2.png" height="300" >
-                            <br> <strong>Fig.2</strong>  The proposed attention-based adversarial defense framework. The upper and lower part correspond to the training over original and adversarial
-                            samples respectively. The change of the activation map is simultaneously constrained by the rectification loss, preservation loss, and classification loss. The
-                            same parameters are shared by the four convolutional neural networks.
-                        </center>
-                    </font>
-                    <br>
-                    <p style="padding-bottom:1px"></p>
-
-                    <h2><font face="helvetica" style="font-size:24px">Paper</font></h2>
-                    <hr style="margin-top:-10px; margin-bottom:13px">
-
-
-                    <font face="helvetica" style="font-size:15px">
-
-                        <div>
-                            <a href="" style="text-decoration: none;">
-                                <img src="./images/paper-plane-fill.png" height="30px">
-                            </a>
-                            <div style="margin-left: 20px; margin-top: 0px;margin-bottom: 10px; display: inline-block; font-size:18px;">
-                                <a href="https://arxiv.org/abs/1811.09831">https://arxiv.org/abs/1811.09831</a> 
-                            </div>
-                        </div>
-                        <div>
-                            <a href="" style="text-decoration: none;">
-                                <img src="./images/paper-plane-fill.png" height="30px">
-                            </a>
-                            <div style="margin-left: 20px; margin-top: 0px;margin-bottom: 10px; display: inline-block; font-size:18px;">
-                                <a href="https://arxiv.org/abs/2005.11904">https://arxiv.org/abs/2005.11904</a> 
-                            </div>
-                        </div>
-
-                        <br>
-                    </font></font></td>
         </tr>
         </tbody>
     </table>
@@ -156,9 +104,9 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="./js_files/manifest.a046e764a7f89ee70324.js"></script>
-<script type="text/javascript" src="./js_files/vendor.bf6c914e1185a8f804a7.js"></script>
-<script type="text/javascript" src="./js_files/app.fd4ed8c6867ac0aa97f6.js"></script>
+<script type="text/javascript" src="./huang_files/manifest.a046e764a7f89ee70324.js"></script>
+<script type="text/javascript" src="./huang_files/vendor.bf6c914e1185a8f804a7.js"></script>
+<script type="text/javascript" src="./huang_files/app.fd4ed8c6867ac0aa97f6.js"></script>
 <style>
     ol {
         counter-reset: sectioncounter;
