@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <title>BJTU-ADAM Lab - 北京交通大学ADAM人工智能实验室官网</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.css">
+</head>
+<body>
+
+<header data-am-widget="header"
+        class="am-header am-header-default">
+    <div class="am-header-left am-header-nav ">
+        <a href="../../index.html">
+
+            <i class="am-header-icon am-icon-home"></i>
+        </a>
+    </div>
+
+    <h1 class="am-header-title">
+        <a href="../../index.html">
+            ADAM Lab
+        </a>
+    </h1>
+    <!--    <div class="am-header-right am-header-nav">-->
+    <!--        <a href="#right-link">-->
+
+    <!--            <i class="am-header-icon am-icon-bars"></i>-->
+    <!--        </a>-->
+    <!--    </div>-->
+</header>
+<section>
+
+    <h1>
+            Benign Adversarial Attack: Tricking Algorithm for Goodness
+    </h1>
+
+
+    <br>
+    <div>
+            <h2>
+                <font face="helvetica" style="font-size:24px">Introduction</font>
+            </h2>
+            <hr style="margin-top:-10px; margin-bottom:13px">
+            <font face="helvetica" style="font-size:18px">
+                <p align="justify">
+                    Due to the critical risk to machine learning algorithms, adversarial attack has been
+                    viewed as malignant in default, which naturally gives rise to the considerable attention
+                    on defense against adversarial examples. Beyond falling into this cat-and-mouse game,
+                    this paper attempts to provide alternative perspective to consider adversarial example
+                    and explore whether we can exploit it in other-than-malignant applications.
+                </p>
+                <br>
+                <p>
+                    We start with the discussion on why adversarial example exists. The hypothesis is that
+                    adversarial example derives from the fact that algorithm utilizes information that human
+                    cannot understand. Using image as example, we analyze the involved information along two
+                    dimensions of task-relevance and semantic-orientation according to whether it is
+                    intrinsic to solve the task and whether it is perceptible to human, respectively.
+                </p>
+                    <img src="./zx_img/frame.png" height="400" width="600"/>
+                    <p>
+                    image information is thus roughly divided into four categories in the task-semantic
+                    coordinate system. While human recognizes image mainly relying on task-relevant semantic
+                    information like shape and contour, machine learning algorithms can harness additional
+                    non-semantic information like imperceptible noises to assist inference. Adversarial
+                    example, in this respect, corrupts the task-relevant non-semantic information (with
+                    added adversarial perturbation) to mislead algorithm inference result without affecting
+                    human perception. From this perspective, we look on adversarial example as proving the
+                    existence of task-relevant non-semantic information, which demonstrates three
+                    interesting characteristics regarding machine learning algorithms as:
+                <ol>
+                    <li> exclusive to
+                        algorithm
+                    <li> reflecting common weakness
+                    <li> utilizable as features.
+                </ol>
+                </p>
+                <br>
+                <p>
+                    Based on this alternative understanding, this paper presents new idea to exploit the
+                    adversarial examples for goodness, which we call <b>benign adversarial attack</b>.
+                    Specifically, the following research directions are introduced corresponding to the
+                    above three characteristics:
+                    <ol>
+                    <li><b>Adversarial Turing test</b>, employing the different
+                    sensitivity to adversarial perturbation to distinguish between human and algorithm;
+                    <li>
+                    <b>Rejecting malicious algorithm</b>,
+                    specially designing adversarial attack to invalid malicious algorithms like privacy
+                    violation and deep fake;
+                    <li> <b>Adversarial data augmentation</b>, discovering and
+                    harnessing more non-semantic features from the generated pseudo sample to address data
+                    shortage problem.
+                </ol>
+                    For each direction, we report preliminary experimental results for
+                    justification as well as providing prototype applications for illustration.rception
+                </p>
+
+                <p>
+                    <b>The main contributions are summarized as follows: </b>
+                </p>
+                <ol style="margin-top:-7px">
+                    <li>
+                        We provide alternative perspective to view adversarial example under a novel
+                        taxonomy of visual information along task-relevance and semantic-orientation.
+                        The emergence of adversarial example is attributed to algorithm’s utilization of
+                        task-relevant non-semantic information.
+                    </li>
+                    <li>
+                        We present brave new idea called benign adversarial attack to exploit the
+                        adversarial examples for goodness.
+                        Three potential research directions are positioned with justification experiments
+                        and prototype applications.
+                    </li>
+                </ol>
+
+            </font>
+
+            <p style="padding-bottom:1px"></p>
+
+
+            <h2>
+                <font face="helvetica" style="font-size:24px">Paper</font>
+            </h2>
+            <hr style="margin-top:-10px; margin-bottom:13px">
+            <a href="https://arxiv.org/pdf/2107.11986.pdf">https://arxiv.org/pdf/2107.11986.pdf</a>
+    </div>
+</section>
+</body>
+
+
+<!--在这里编写你的代码-->
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/js/amazeui.min.js"></script>
+</body>
+
+</html>
+<style>
+    h1{
+        font-weight: bold;
+    }
+    .title {
+        color: black;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    p {
+        text-indent: 2em;
+    }
+
+    .ahref {
+        color: black;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    @keyframes flow {
+        from {
+            filter: hue-rotate(0deg);
+        }
+        to {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    figure {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    img {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .am-header-default {
+        background-color: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+        animation: flow 12s linear infinite;
+
+    }
+</style>
