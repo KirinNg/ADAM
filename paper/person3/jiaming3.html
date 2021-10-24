@@ -96,11 +96,61 @@
                     <font face="helvetica" style="font-size:15px">
                         <center>
                             <img src="./images/pic3.png" height="500" width="1200">
-                            <br> <strong>Fig.1</strong> The proposed robust CAPTCHA designing framework. The left represents the process of CAPTCHA cracking, including sequential recognition, feature extraction, image binarization (Gaussian filtering) and stochastic transformation. The right represents our solution of CAPTCHA generation, including the corresponding multi-target attack, ensemble adversarial training, differentiable approximation and expectation, respectively.
+                            <br> <strong>Fig.1</strong>&nbsp; The proposed robust CAPTCHA designing framework. The left represents the process of CAPTCHA cracking, including sequential recognition, feature extraction, image binarization (Gaussian filtering) and stochastic transformation. The right represents our solution of CAPTCHA generation, including the corresponding multi-target attack, ensemble adversarial training, differentiable approximation and expectation, respectively.
                         </center>
                     </font>
-                    <br>
+
+                   <font face="helvetica" style="font-size:18px">
+                        <p align="justify">
+                            The framework is shown on the Figure 1, the left shows that typical cracking of character-based CAPTCHA consists of two stages as image preprocessing and OCR. The above data analysis has demonstrated that image preprocessing has the effect of distortion removal, making it not possible to straightforwardly employ adversarial perturbation for robust CAPTCHA design. In addition to the image preprocessing stage, the OCR stage also possesses characteristics obstructing CAPTCHA:
+                            <br>
+                            (1)sequential recognition, disabling the traditional single character-oriented adversarial perturbation;
+                            <br>
+                            (2)black-box crack, making it ineffective to attack one specific OCR model. To address the above characteristics of CAPTCHA cracking, our proposed CAPTCHA.
+                        </p>
+                    </font>
                     <p style="padding-bottom:1px"></p>
+
+
+                    <h2><font face="helvetica" style="font-size:24px">Results</font></h2>
+                    <hr style="margin-top:-10px; margin-bottom:13px">
+                    <font face="helvetica" style="font-size:15px">
+                        <center>
+                            <img src="./images/table_pic.png" height="240">
+                            <br> <strong>Table.1</strong>&nbsp; The recognition of CAPTCHAs with different levels of complexity is performed in different settings. The results of the algorithm are obtained after Gaussian filtering and image binarization.
+                        </center>
+                    </font>
+
+                    <font face="helvetica" style="font-size:18px">
+                        <p align="justify">
+                            To compare the performance of the proposed robust CAPTCHA (rCAPTCHA) designing method, we report the recognition accuracies of state-of-the-art cracking solution under the following settings:
+                            <br>
+                            <strong>Raw: </strong>the original CAPTCHA images without adding adversarial perturbations;
+                            <br>
+                            <strong>rCAPTCHA parallel: </strong>the proposed solution to generated adversarial images, expect that the sequential recognition sequential recognition sub-module of OCR is replaced by 4 parallel recognition networks (each realized by one fully-connected layer) to address one character’s recognition; 
+                            <br>
+                            <strong>rCAPTCHA w/o preprocessing: </strong> the proposed solution to generated adversarial images, but without considering the image preprocessing stages;
+                            <br>
+                            <strong>rCAPTCHA:</strong>the proposed solution to generated adversarial images, considering both sequential recognition and image preprocessing operations.
+                    
+                        </p>
+                        <p align="justify">
+                            To examine the application scope of the proposed CAPTCHA generation methods, we conducted experiments on the CAPTCHAs with three levels of complexities: easy, medium, hard. For each of the settings, we selected/generated 500 CAPTCHA images for testing, and summarize the derived average recognition accuracy in Table 1. Experimental observations include:
+                            <br>
+                            (1) By adding adversarial perturbations, the right 3 columns consistently obtain lower accuracies than the first column, showing the usability of employing adversarial perturbations in resisting CAPTCHA cracking.
+                            <br>
+                            (2) Without considering the sequential recognition or image preprocessing characteristics, the resisting effect of rCAPTCHA parallel and rCAPTCHA w/o preprocessing is not as obvious as that of rCAPCHA. This validates the necessity of multi-target attack and differentiable approximation modules. 
+                            <br>
+                            (3) Regarding CAPTCHAs with different complexities, we observed consistent phenomenon among the four settings, demonstrating the wide application scope of the proposed CAPTCHA generation method.
+                        </p>
+                    </font>
+                        
+
+
+
+
+
+
 
                     <h2><font face="helvetica" style="font-size:24px">Paper</font></h2>
                     <hr style="margin-top:-10px; margin-bottom:13px">

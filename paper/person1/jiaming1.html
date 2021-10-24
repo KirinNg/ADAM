@@ -67,10 +67,17 @@
     <div>
         <h2><font face="helvetica" style="font-size:24px">Introduction</font></h2>
                 <hr style="margin-top:-10px; margin-bottom:13px">
+                <font face="helvetica" style="font-size:15px">
+                    <center>
+                        <img src="./images/intro_pic.png" height="300">
+                        <br> <strong>Fig.1</strong>&nbsp; Schematic illustration of the proposed adversarial privacy-preserving filter. Given a face image, the synthetic adversarial image is expected to fool the malicious face recognition algorithm.
+                    </center>
+                </font>
+                <br>
                 <font face="helvetica" style="font-size:18px">
                     <p align="justify">
-                        While widely adopted in practical applications, face recognition has been critically discussed regarding the malicious use of face images and the potential privacy problems, e.g., deceiving payment system and causing personal sabotage. Online photo sharing services unintentionally act as the main repository for malicious crawler and face recognition applications. This work aims to develop a privacy-preserving solution, called Adversarial Privacy-preserving Filter (APF), to protect the online shared face images from being maliciously used.We propose an end-cloud collaborated adversarial attack solution to satisfy requirements of privacy, utility and nonaccessibility. Specifically, the solutions consist of three modules:
-                           <br>
+                        While widely adopted in practical applications, face recognition has been critically discussed regarding the malicious use of face images and the potential privacy problems, e.g., deceiving payment system and causing personal sabotage. Online photo sharing services unintentionally act as the main repository for malicious crawler and face recognition applications. This work aims to develop a privacy-preserving solution, called Adversarial Privacy-preserving Filter (APF), to protect the online shared face images from being maliciously used. We propose an end-cloud collaborated adversarial attack solution to satisfy requirements of privacy, utility and non-accessibility (illustrated in Figure. 1). Specifically, the solutions consist of three modules: 
+                        <br>
                            (1) image-specific gradient generation, to extract image-specific gradient in the
                            user end with a compressed probe model;
                            <br>
@@ -83,7 +90,7 @@
                            Extensive experiments on three datasets validate the effectiveness and efficiency of the proposed solution. A prototype application is also released for further evaluation.We hope the end-cloud collaborated attack framework could shed light on addressing the issue of online multimedia sharing privacy-preserving issues from user side.
                     </p>
 
-                    <p>
+                    <!-- <p>
                         <b>The contributions of the paper can be summarized as follows:</b>
                     </p>
                     <ol style="margin-top:-7px">
@@ -99,7 +106,7 @@
                         <li>
                             We conducted extensive experiments to validate the effectiveness and efficiency of the proposed solution framework. A prototype of adversarial privacy-preserving filter is further carried out and released for evaluation.
                         </li>
-                    </ol>
+                    </ol> -->
 
                 </font>
 
@@ -113,10 +120,43 @@
                     <font face="helvetica" style="font-size:15px">
                         <center>
                             <img src="./images/pic1.png" height="500" width="1200">
-                            <br> <strong>Fig.1</strong> The proposed adversarial privacy-preserving filter framework.
+                            <br> <strong>Fig.2</strong>&nbsp; The proposed adversarial privacy-preserving filter framework.
                         </center>
                     </font>
                     <br>
+
+                    <font face="helvetica" style="font-size:18px">
+                        <p align="justify">
+                            The working flow of privacy-preserving filter is illustrated in Fig. 2, where three parts are involved as user end, privacy-preserving server cloud and photo sharing service. Given a portrait image, its image-specific gradient is first extracted in the user end, and then issued to the privacy-preserving server cloud for enhancement to derive adversarial noise. After perturbed by the enhanced adversarial noise, the resultant adversarial portrait image is expected to fool the potential face cracker on photo sharing service. It is noted that the original image is accessible only to user end during the whole process, preventing information leakage even on the privacy-preserving server. The core solution is an end-cloud collaborated adversarial attack framework, consisting of three algorithm modules deployed respectively in the user end and server cloud: (1) Image-specific gradient generation is to obtain the image-specific gradient by employing a compressed probe model runnable in the end. (2) Adversarial gradient transfer module is to align the image gradient from probe model and the server model in the cloud, with the goal to recover the adversarial information fooling practical crackers. (3) Universal adversarial perturbation enhancement module is to append image-independent universal perturbation to further enhance the derived adversarial noise. 
+                            <br>
+                        </p>
+    
+                    </font>
+
+                    <h2><font face="helvetica" style="font-size:24px">Result</font></h2>
+                    <hr style="margin-top:-10px; margin-bottom:13px">
+
+
+                    <font face="helvetica" style="font-size:15px">
+
+                        <font face="helvetica" style="font-size:15px">
+                            <center>
+                                <img src="./images/result_pic.png" height="500" width="1200">
+                                <br> <strong>Table 1</strong> &nbsp;The ASRs on LFW, AgeDB-30 and CFP-FP datasets.
+                            </center>
+                        </font>
+                        <br>
+    
+                        <font face="helvetica" style="font-size:18px">
+                            <p align="justify">
+                                In Table 1, we have the following main findings: (1) In the case of meeting non-accessibility requirement, the ASRs of our proposed method on the three datasets reach 98.8%, 95.5% and 88.3%, respectively. The good attack performance proves that the proposed filter can preserve user’s privacy by fooling face recognition models. (2) Our privacy-preserving filter is compatible with various gradient extraction algorithms. The stronger the gradient extraction algorithms, the better performance the filter achieves. This suggests us to use more effective adversarial gradient extraction algorithm when deploying the proposed framework in practical applications. (3) For each gradient extraction algorithm, each row performs better than previous one, which verify the effectiveness of the gradient transfer module and universal adversarial perturbation module.
+                                <br>
+                            </p>
+        
+
+                        <br>
+                    </font></font></td>
+
                     <p style="padding-bottom:1px"></p>
 
                     <h2><font face="helvetica" style="font-size:24px">Paper</font></h2>
@@ -130,11 +170,49 @@
                                 <img src="./images/paper-plane-fill.png" height="30px">
                             </a>
                             <div style="margin-left: 20px; margin-top: 0px;margin-bottom: 10px; display: inline-block; font-size:18px;">
-                                <a href="https://dl.acm.org/doi/abs/10.1145/3394171.3413906">https://dl.acm.org/doi/abs/10.1145/3394171.3413906</a>
+                                <a href="https://dl.acm.org/doi/10.1145/3394171.3413906">https://dl.acm.org/doi/10.1145/3394171.3413906</a>
                             </div>
                         </div>
 
-                        <br>
+                    </font></font></td>
+
+                    <p style="padding-bottom:1px"></p>
+
+                    <h2><font face="helvetica" style="font-size:24px">Code</font></h2>
+                    <hr style="margin-top:-10px; margin-bottom:13px">
+
+
+                    <font face="helvetica" style="font-size:15px">
+
+                        <div>
+                            <a href="" style="text-decoration: none;">
+                                <img src="./images/paper-plane-fill.png" height="30px">
+                            </a>
+                            <div style="margin-left: 20px; margin-top: 0px;margin-bottom: 10px; display: inline-block; font-size:18px;">
+                                <a href="https://github.com/adversarial-for-goodness/APF">https://github.com/adversarial-for-goodness/APF</a>
+                            </div>
+                        </div>
+
+                    </font></font></td>
+
+                    <p style="padding-bottom:1px"></p>
+
+                    <h2><font face="helvetica" style="font-size:24px">Demo</font></h2>
+                    <hr style="margin-top:-10px; margin-bottom:13px">
+
+
+                    <font face="helvetica" style="font-size:15px">
+
+                        <div>
+                            <a href="" style="text-decoration: none;">
+                                <img src="./images/paper-plane-fill.png" height="30px">
+                            </a>
+                            <div style="margin-left: 20px; margin-top: 0px;margin-bottom: 10px; display: inline-block; font-size:18px;">
+                                <a href="https://pan.baidu.com/s/1c7yp1_U6Brm_b0BMTfCcrA">https://pan.baidu.com/s/1c7yp1_U6Brm_b0BMTfCcrA</a>
+                                &nbsp&nbsp Password:7a7x
+                            </div>
+                        </div>
+
                     </font></font></td>
     </div>
 </section>
